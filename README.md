@@ -56,24 +56,6 @@ Scan the QR code with Expo Go. If Expo Go reports an incompatible SDK, update Ex
 
 With no `.env`, the app runs in **demo mode**: accounts live on the device, nothing syncs, and the AI features show a setup message. Everything else works.
 
-## Turn on the backend
-
-1. Create a Supabase project (region `af-south-1`, Cape Town).
-2. SQL Editor: run `supabase/schema.sql`.
-3. Authentication > Providers: enable **Anonymous sign-ins** (guest mode needs it). Turn on CAPTCHA or keep the default sign-in rate limits so nobody can mass-create guests.
-4. Deploy the AI function:
-   ```bash
-   npm install -g supabase
-   supabase login
-   supabase link --project-ref YOUR-PROJECT-REF
-   supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
-   supabase functions deploy ai-chat
-   ```
-5. Copy `.env.example` to `.env`, fill in the three values, restart Expo.
-
-The Anthropic key lives only in Supabase secrets. The app never holds it. Free users get 15 AI messages per 24 hours and Pro users 200, enforced on the server from the database. `GLOBAL_DAILY_CAP` (default 2000) limits total spend.
-
-To mark someone Pro, run `update profiles set is_pro = true where email = '...'` in the SQL editor. Users cannot change this themselves.
 
 ## Live prices
 
@@ -82,9 +64,6 @@ cd scraper && npm install && npx playwright install chromium
 SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npm run scrape
 ```
 
-Add the same two values as GitHub repository secrets to enable the weekly workflow.
-
-**Before you trust it:** the CSS selectors in `scraper/scrape-prices.ts` are starting points and are untested against the live sites. Open each store in a browser, inspect a product card, and fix them. Some retailers block automated traffic or forbid scraping in their terms, so read those first. The scraper only writes prices it read, and rejects any price outside 40% to 250% of the baseline, so a wrong match is unlikely to land in the database.
 
 ## Tests
 
