@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "GroceryGo",
+    "slug": "grocerygo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#D4500A" },
+    "ios": { "supportsTablet": false, "bundleIdentifier": "com.grocerygo.app" },
+    "android": { "package": "com.grocerygo.app" }
+  }
+}

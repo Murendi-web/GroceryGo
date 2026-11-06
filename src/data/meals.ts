@@ -1,0 +1,87 @@
+import type { Meal } from '../types'
+
+export const MEALS: Meal[] = [
+  {
+    name: "Classic Braai",
+    time: "2 hrs",
+    serves: 4,
+    col: "#D4500A",
+    keys: [
+      "Chicken Portions 1kg",
+      "Boerewors per kg",
+      "Tomatoes per kg",
+      "Onions per kg",
+      "Mrs Balls Chutney 470g",
+      "Braai Spice 200g",
+      "Albany White Bread 700g",
+    ],
+  },
+  {
+    name: "Pap & Wors",
+    time: "45 min",
+    serves: 4,
+    col: "#8B6914",
+    keys: [
+      "Boerewors per kg",
+      "Ace Maize Meal 5kg",
+      "Tomatoes per kg",
+      "Onions per kg",
+      "Cabbage each",
+    ],
+  },
+  {
+    name: "Chicken Curry",
+    time: "1 hr",
+    serves: 4,
+    col: "#2A7A50",
+    keys: [
+      "Chicken Portions 1kg",
+      "Tomatoes per kg",
+      "Onions per kg",
+      "Tastic Rice 2kg",
+      "Tomato Paste 115g",
+      "Curry Powder 100g",
+    ],
+  },
+  {
+    name: "Mince Pasta",
+    time: "30 min",
+    serves: 4,
+    col: "#6B4C9A",
+    keys: [
+      "Beef Mince per kg",
+      "Spaghetti 500g",
+      "Tomato Paste 115g",
+      "Onions per kg",
+      "Tomato Sauce 500ml",
+      "Aromat 200g",
+    ],
+  },
+  {
+    name: "SA Breakfast",
+    time: "20 min",
+    serves: 2,
+    col: "#C17A20",
+    keys: [
+      "Nulaid Eggs x18",
+      "Pork Rashers per kg",
+      "Tomatoes per kg",
+      "Albany White Bread 700g",
+      "Butter 500g",
+    ],
+  },
+  {
+    name: "Samp & Mince",
+    time: "1.5 hrs",
+    serves: 6,
+    col: "#1A7A9A",
+    keys: [
+      "Beef Mince per kg",
+      "Ace Maize Meal 5kg",
+      "Onions per kg",
+      "Tomatoes per kg",
+      "Tomato Paste 115g",
+      "Curry Powder 100g",
+    ],
+  },
+]
